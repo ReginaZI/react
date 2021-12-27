@@ -1,20 +1,30 @@
-import * as $ from 'jquery'
-import json from './assets/json.json'
 import './styles/main.css'
 import React from 'react'
 import ReactDom from 'react-dom'
-import AppHello from './components/hello/hello'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AppHello from './components/account/account'
+import Cards from './components/cards/cards'
+import Nav from './components/nav'
+import NotFound from './components/notfound';
 
 
-
-document.addEventListener('DOMContentLoaded', function(){
-
-
-    ReactDom.render(
-        <>
-            <AppHello />
-            <AppHello name="Regina" />
-        </>,
-        document.querySelector('.app')
-    )
-})
+ReactDom.render(
+    <>
+        <AppHello />
+        <AppHello name="Regina" />
+        <Cards />
+    </>,
+    document.querySelector('.app')
+)
+ReactDom.render(
+        <Router>
+            <div>
+            <Nav />
+                <Routes>
+                    <Route path="/cards" element={<Cards />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </div>
+        </Router>,
+    document.querySelector('.app')
+)

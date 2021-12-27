@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './hello.m.css' 
+import styles from './acount.m.css' 
 
 export default function({ name = 'user'}){
 
