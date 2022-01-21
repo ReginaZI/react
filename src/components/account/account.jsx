@@ -4,9 +4,9 @@ import styles from './acount.m.css'
 
 const Account = ({ name = 'user'}) => {
     return ( 
-        <div className={styles.box}>
-        <h2 className={styles.title}>Hello, {name}</h2>
-    </div>
+        <div className={styles.content}>
+            <h2 className={styles.title}>Hello, {name}</h2>
+        </div>
      );
   };
   

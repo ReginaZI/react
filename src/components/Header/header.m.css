@@ -1,0 +1,13 @@
+.title{
+    color: red;
+}
+
+.header {
+    grid-area: header;
+    padding-left: 281px;
+    border-top: 1px solid #EBEDF3;
+    background-color: #ffffff;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
