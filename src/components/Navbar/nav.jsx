@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link}  from 'react-router-dom';
+import {NavLink}  from 'react-router-dom';
 import n from './nav.m.css' 
 
 
@@ -7,9 +7,10 @@ import n from './nav.m.css'
 const Nav = () => {
     return (
         <div className={n.sidebar}>
-        <Link to="/">Главная</Link> 
-        <Link to="/cards">Карточки</Link>
-        <Link to="/acount">Аккаунт</Link>
+        <NavLink to="/">Главная</NavLink> 
+        <NavLink to="/cards">Карты</NavLink>
+        <NavLink to="/account">Аккаунт</NavLink>
+        <NavLink to="/statistics">Статистика</NavLink>
       </div>
     )
   };
